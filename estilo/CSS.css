@@ -1,0 +1,149 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');/*Código para pegar fontes da Google*/
+@font-face {/*Código para adicionar uma fonte externa tirada de sites que não sejam a Google*/
+    font-family: 'IDroid';
+    src: url(fonts/IDroid\ Bold.otf) format('opentype'), url('IDroid\ IDroid.otf');
+}
+:root{/*Código para inserir os itens no programa de maneira que eu possa usar elas globalmente de maneira simplificada, atavés de variavel*/
+    --cor0:#FC8928 ;
+    --cor1:#808080;
+    --cor2:#FFCF31;
+    --cor3:#4DD0D1;
+    --cor4:#8BC34A;
+    --fonte-padrao: arial, Verdana, Helvetica, sans-serif;
+
+}
+*{/*Código para definir margem e padding globais, neste caso em 0pixels ele aproxima todos os itens para não ficarem bagunçados*/
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #fc8728a9;
+    margin: 0px 0px 0px 0px;
+}
+a.externo::after{/*Código para inserir uma classe global em todas as TAGS deste tipo class='externo', "::after" é para inserir após o conteudo no final*/
+    content: '\1F517';/*Código para inserir emote no conteudo!!*/
+background-color: #f76300;}
+a.externo1::after{
+    content: '\1F517';
+    background-color: #FFCF31;
+}
+main em{/*Código para inserir uma alteração em CSS em todas as TAGS que estam em itélico através da TAG <em></em>*/
+    background-color: #f76300;
+    font-weight: bold;/*Comando para deixar a fonte mais grossa*/
+}
+header{
+    background-color: var(--cor3);
+    padding: 30px 1px 2px 0px;
+    min-height: 115px;/*Código para inserir uma altura dentro da caixa do cabeçalho para o mesmo ficar masi longe da base superior*/
+    box-shadow: 0px 0px 7px 4px black;/*Código para inserir sombra na caixa da TAG*/
+}
+article{
+    background-color: white;
+    margin: auto;
+    padding: 0px 7px 7px 7px;
+    margin-bottom: 20px;/*Código para inserir um espaçamento na base inferior da TAG neste caso em article para manter um espaçamento do rodapé*/
+    border-bottom-right-radius: 12px;/*Código para definir a borda em uma area especifica neste caso no rodapé de article a esquerda*/
+    border-bottom-left-radius: 12px;/*Código para definir a borda em uma area especifica neste caso no rodapé de article a direita*/
+    box-shadow: 0px 0px 5px black;
+
+    min-width: 300px;/*Código para definir em que quantidade de pixels a página vai começar a liberar o back-ground através de uma largura minima */
+    max-width: 800px;/*Código para definir em que quantidade de pixels a página vai começar a liberar o back-ground através de uma largura máxima */
+}
+img {/*Código para inserir uma tamanho especifico e  as imagens ficarem acompanhando o tamnho da página neste caso em 100% */
+    width: 100%;
+}
+article img.pequena{/*Código para alterar um item especifico, através do class*/
+    width: 80%;
+    display: block;/*Comando para transformar um item em bloco para o mesmo poder ser alterado*/
+    margin: auto;/*Comando para centralizar o item no meio da página*/
+}
+article iframe.video{/*Código para alterar um item especifico, através do class*/
+    width: 90%;
+    display: block;/*Código para tranformar o item em bloco para poder ser alterado*/
+    margin: auto;/*Código para deixar a margem centralizada na página*/
+}
+h1{
+    font-family: 'Bebas Neue', var(--fonte-padrao);
+    font-size: 36px;/*comando para alterar o tamanho da fonte*/
+    text-align: center;
+    color: white;
+    text-shadow: 3px 4px 0px black;
+}
+main h2{
+    font-family: 'IDroid', var(--fonte-padrao);
+    background-image: linear-gradient(to right, rgb(236, 88, 2), #ffffff);
+    margin: 1px 0px 10px -7px;
+    padding: 1px 0px 2px 1px;
+}
+h3{
+    font-family:  var(--fonte-padrao);
+    text-align: center;
+    color:white ;
+    padding: 20px 0px 0px 0px;
+    text-shadow: 2px 1px 0px black;/*Código para adicionar sombra nas letras*/
+}
+main p{/*comando para inserir uma alteração global sem que a mesma interfira nas outras TAGS assim sendo não posso colocar o filho neste comando para não entrar em conflito com as TAgs que estão por cima do mesmo*/
+    padding: 10px;
+    text-align: justify;
+    text-indent: 30px; /*Código para espaçar o paragrafo na primeira letra*/
+    line-height: 18px;/*Código para colocar uma altura entre cada linha*/
+}
+aside{
+    background-color: var(--cor0);
+    padding: -1px 0px 2px 1px;
+    margin: 15px 0px 9px 0px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 7px black;
+    
+}
+aside > p > a{/*Comando especificado para fazer uma mudança no link*/
+    text-decoration: none;
+}
+aside > h2{/*Comando para colocar uma alteração especifica em um item com o comando "Filho"*/
+    font-family: 'Bebas Neue', cursive, var(--fonte-padrao);
+    background-color: var(--cor2);
+    background-image: none;/*Comando para tirar qualquer decoração que esteja na caixa deste item, neste caso retirar o gradiente de cor*/
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border-top-left-radius: 12px;/*Comando para alterar a borda em um local especifico, neste caso na esquerda*/
+    border-top-right-radius: 12px;
+    text-align: center;
+    
+}
+aside strong{
+    font-weight: bold;/*Comando para deixar a letra mais gorda parecido com negrito*/
+}
+aside a{
+    font-weight: bold;
+    background-color:var(--cor2);
+
+}
+aside > ul{
+    padding: 0px 0px 0px 25px;
+    margin: 6px 0px 6px 1px;
+    columns: 2;/*Comando para inserir 2 colunas quanto maior o digito maior é a quantidade de colunas*/
+    list-style-type: '\1F369\00A0';/*Comando para inserir emote com o código \1F369\ e um comando para inserir um espaçamento entre o texto e o emote com o código \00A0 inclusive pode ser adicionada quantas colunas forem necessárias repetindo o mesmo código*/
+}
+nav{/*Comando que deve ser usado com links, como TAG superior*/
+    background-color: var(--cor1);
+    padding: 1px 0px 2px 1px;
+    margin: 0px 0px 1px 0px;
+    text-shadow: 1px 1px 0px black;
+}
+nav > a{/*Comando para inserir modificações em links*/
+    font-family: 'Bebas Neue', cursive, var(--fonte-padrao);
+    text-decoration: none;/*Comando para retirar decoração do link, neste caso o sublinhado do mesmo*/
+    padding: 10px;
+    color: white;
+}
+nav > a:hover{/*Comando para inserir interação com o link, através de decoração*/
+    text-decoration: underline;
+    color: var(--cor0) ;
+    transition-duration: 0.5s;
+}
+footer{
+    text-align: center;
+    background-color: var(--cor4);
+    box-shadow: 2px 2px 2px 2px black;
+}
