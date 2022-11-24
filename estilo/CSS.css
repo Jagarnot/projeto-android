@@ -18,8 +18,12 @@
     padding: 0px;
 }
 body{
-    background-image: url();
-    background-color: #fc8728a9;
+    background-image: url(midia/wallpaper.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center bottom;
+    background-color: #000000;
     margin: 0px 0px 0px 0px;
 }
 a.externo::after{/*Código para inserir uma classe global em todas as TAGS deste tipo class='externo', "::after" é para inserir após o conteudo no final*/
