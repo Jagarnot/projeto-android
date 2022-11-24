@@ -149,6 +149,6 @@ nav > a:hover{/*Comando para inserir interação com o link, através de decora�
 }
 footer{
     text-align: center;
-    background-color: var(--cor4);
+    background-color:#d61a1a;
     box-shadow: 2px 2px 2px 2px black;
 }
